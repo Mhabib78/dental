@@ -1,33 +1,17 @@
-* {
+body, html {
+    height: 100%;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
 }
 
 body {
-    color: #fff;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    color: #fff;
 }
 
 header, footer {
-    flex-shrink: 0; /* ensures that header and footer don't shrink */
-}
-
-.section {
-    flex-grow: 1; /* sections grow to take up available space */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-header {
-    background-color: #34495e;
-    padding: 1vw;
+    flex: 0 0 auto;  /* Do not grow, do not shrink, auto compute based on content */
 }
 
 .container {
@@ -37,31 +21,41 @@ header {
 }
 
 .logo {
-    font-size: 3vw;
+    font-size: 4vh; /* Responsive font size */
 }
 
 .menu {
     list-style-type: none;
     display: flex;
-    gap: 2vw;
+    gap: 2vh;
 }
 
 .menu li a {
     text-decoration: none;
     color: #fff;
     transition: color 0.3s ease;
+    font-size: 2vh;
 }
 
 .menu li a:hover {
     color: #27ae60;
 }
 
+.section {
+    flex: 1;  /* Divide remaining space among sections */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 2vh; /* Padding for aesthetics */
+}
+
 h2 {
-    font-size: 2.5vw;
+    font-size: 3vh;  /* Responsive font size */
 }
 
 p {
-    font-size: 1.5vw;
+    font-size: 2.5vh;
 }
 
 .bg-gradient-blue {
@@ -77,8 +71,7 @@ p {
 }
 
 footer {
-    background-color: #34495e;
-    padding: 1vw;
     text-align: center;
-    font-size: 1.5vw;
+    font-size: 2vh;
+    padding: 1vh;
 }
