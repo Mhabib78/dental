@@ -1,45 +1,49 @@
-body, html {
-    height: 100%;
-    width: 100%;
+* {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
 body {
+    color: #fff;
+    font-size: 1.5vw;
+    line-height: 1.5;
     display: flex;
     flex-direction: column;
-    color: #fff;
 }
 
 header, footer {
-    flex: 0 0 auto;
-    width: 100%; /* ensure it spans the full width */
+    background-color: #34495e;
+    flex: 0 0 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
 }
 
 .container {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 100%; /* ensure it spans the full width */
-    padding: 0 2%; /* slight padding to ensure content doesn't touch the edges */
+    justify-content: space-between;
 }
 
 .logo {
-    font-size: 6vh;
+    font-size: 2vw;
 }
 
 .menu {
     list-style-type: none;
     display: flex;
-    gap: 3vh;
+    gap: 2vw;
 }
 
 .menu li a {
     text-decoration: none;
     color: #fff;
     transition: color 0.3s ease;
-    font-size: 3vh;
+    font-size: 1.5vw;
 }
 
 .menu li a:hover {
@@ -51,16 +55,17 @@ header, footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 4vh; 
+    padding: 2vh 5%;
 }
 
-h2 {
-    font-size: 5vh;
+.section h2 {
+    font-size: 3vw;
 }
 
-p {
-    font-size: 4vh;
+.section p {
+    font-size: 2.5vw;
 }
 
 .bg-gradient-blue {
@@ -75,9 +80,6 @@ p {
     background: linear-gradient(to right, #e74c3c, #c0392b);
 }
 
-footer {
-    text-align: center;
-    font-size: 3vh;
-    padding: 2vh;
+footer p {
+    font-size: 1.5vw;
 }
- 
