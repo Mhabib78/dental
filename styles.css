@@ -3,19 +3,24 @@ body {
     margin: 0;
     background-color: #f4f4f4;
     color: #333;
-    font-size: 1rem;
     display: flex;
     flex-direction: column;
     height: 100vh;
 }
 
-header, footer {
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+}
+
+header, footer {
     background-color: #2c3e50;
     color: #ecf0f1;
+    width: 100%;
 }
 
 header {
@@ -26,69 +31,56 @@ header {
     z-index: 1000;
 }
 
+.menu {
+    display: flex;
+    gap: 1rem;
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: inherit;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.menu li a:hover {
+    background-color: #34495e;
+    border-radius: 5px;
+}
+
+.section {
+    min-height: calc(100vh / 3 - 4rem); /* Subtracting header and footer heights */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-box {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.circle {
+    width: 60px;
+    height: 60px;
+    background-color: #e74c3c;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+}
+
 footer {
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
     z-index: 1000;
-    display: flex;
-    justify-content: space-around;
-}
-
-.content {
-    padding: 1rem;
-    margin-top: 15vh;
-    margin-bottom: 15vh;
-    overflow-y: auto;
-    flex-grow: 1;
-}
-
-.section {
-    background-color: #ffffff;
-    border-radius: 10px;
-    padding: 1rem;
-    margin-bottom: 1rem; 
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
-.section h2 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-}
-
-.section p {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-}
-
-button {
-    padding: 0.5rem 1rem;
-    background-color: #2c3e50;
-    color: #ecf0f1;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #34495e;
-}
-
-.icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 60px;
-    height: 60px;
-    background-color: #7f8c8d;
-    border-radius: 12px;
-    transition: background-color 0.3s ease;
-}
-
-.icon:hover {
-    background-color: #bdc3c7;
+    text-align: center;
+    padding: 1rem 0;
 }
 
 .logo {
@@ -96,12 +88,18 @@ button:hover {
     font-weight: bold;
 }
 
-.menu-icon, .home-icon, .consult-icon, .shop-icon {
-    /* Add specific icon styles or background-images for each icon here */
-}
-
+/* Responsiveness for smaller screens */
 @media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+
     .logo {
         font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .menu {
+        display: none;
     }
 }
