@@ -7,25 +7,17 @@
 
 body {
     color: #fff;
-    font-size: 1.1em;
+    font-size: calc(1vw + 1vh + 0.5vmin);
     line-height: 1.5;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    overflow: hidden;
 }
 
 header {
     background-color: #34495e;
-    padding: 1rem 5%;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 2;
+    padding: 2vh 5vw; 
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 90vw;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -33,13 +25,13 @@ header {
 }
 
 .logo {
-    font-size: 1.5em;
+    font-size: 4vw;
 }
 
 .menu {
     list-style-type: none;
     display: flex;
-    gap: 20px;
+    gap: 2vw;
 }
 
 .menu li a {
@@ -53,14 +45,9 @@ header {
 }
 
 .section {
-    flex: 1;  /* ensures equal division of space between sections */
-    padding: 4rem 5%;
+    padding: 10vh 5vw; 
     text-align: center;
-}
-
-/* This will ensure the first section isn't overlapped by the header */
-#ai-analyzer {
-    padding-top: calc(4rem + 80px);  /* 80px is an estimated height of the header */
+    height: 33vh; /* split the available height evenly between sections */
 }
 
 .bg-gradient-blue {
@@ -77,10 +64,6 @@ header {
 
 footer {
     background-color: #34495e;
-    padding: 1rem 5%;
+    padding: 2vh 5vw;
     text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 2;
 }
