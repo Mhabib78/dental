@@ -1,7 +1,9 @@
 body, html {
     height: 100%;
+    width: 100%;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 body {
@@ -11,30 +13,33 @@ body {
 }
 
 header, footer {
-    flex: 0 0 auto;  /* Do not grow, do not shrink, auto compute based on content */
+    flex: 0 0 auto;
+    width: 100%; /* ensure it spans the full width */
 }
 
 .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%; /* ensure it spans the full width */
+    padding: 0 2%; /* slight padding to ensure content doesn't touch the edges */
 }
 
 .logo {
-    font-size: 4vh; /* Responsive font size */
+    font-size: 6vh;
 }
 
 .menu {
     list-style-type: none;
     display: flex;
-    gap: 2vh;
+    gap: 3vh;
 }
 
 .menu li a {
     text-decoration: none;
     color: #fff;
     transition: color 0.3s ease;
-    font-size: 2vh;
+    font-size: 3vh;
 }
 
 .menu li a:hover {
@@ -42,20 +47,20 @@ header, footer {
 }
 
 .section {
-    flex: 1;  /* Divide remaining space among sections */
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    padding: 2vh; /* Padding for aesthetics */
+    padding: 4vh; 
 }
 
 h2 {
-    font-size: 3vh;  /* Responsive font size */
+    font-size: 5vh;
 }
 
 p {
-    font-size: 2.5vh;
+    font-size: 4vh;
 }
 
 .bg-gradient-blue {
@@ -72,6 +77,6 @@ p {
 
 footer {
     text-align: center;
-    font-size: 2vh;
-    padding: 1vh;
+    font-size: 3vh;
+    padding: 2vh;
 }
