@@ -1,68 +1,107 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-}
-
 body {
-    color: #fff;
-    font-size: 1.1em;
-    line-height: 1.5;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
-header {
-    background-color: #34495e;
-    padding: 1rem 5%;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
+header, footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1rem;
+    background-color: #2c3e50;
+    color: #ecf0f1;
 }
 
-.logo {
-    font-size: 1.5em;
-}
-
-.menu {
-    list-style-type: none;
-    display: flex;
-    gap: 20px;
-}
-
-.menu li a {
-    text-decoration: none;
-    color: #fff;
-    transition: color 0.3s ease;
-}
-
-.menu li a:hover {
-    color: #27ae60;
-}
-
-.section {
-    padding: 4rem 5%;
-    text-align: center;
-}
-
-.bg-gradient-blue {
-    background: linear-gradient(to right, #3498db, #2980b9);
-}
-
-.bg-gradient-green {
-    background: linear-gradient(to right, #2ecc71, #27ae60);
-}
-
-.bg-gradient-pink {
-    background: linear-gradient(to right, #e74c3c, #c0392b);
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 }
 
 footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+}
+
+.content {
+    padding: 1rem;
+    margin-top: 15vh;
+    margin-bottom: 15vh;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.section {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.section p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
     background-color: #34495e;
-    padding: 1rem 5%;
-    text-align: center;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: #7f8c8d;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.icon:hover {
+    background-color: #bdc3c7;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.menu-icon, .home-icon, .consult-icon, .shop-icon {
+    /* Add specific icon styles or background-images for each icon here */
+}
+
+@media (max-width: 600px) {
+    .logo {
+        font-size: 1.2rem;
+    }
 }
