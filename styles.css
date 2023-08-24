@@ -58,6 +58,11 @@ header {
     text-align: center;
 }
 
+/* This will ensure the first section isn't overlapped by the header */
+#ai-analyzer {
+    padding-top: calc(4rem + 80px);  /* 80px is an estimated height of the header */
+}
+
 .bg-gradient-blue {
     background: linear-gradient(to right, #3498db, #2980b9);
 }
